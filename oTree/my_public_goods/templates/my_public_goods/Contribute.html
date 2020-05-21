@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    投資意思決定
+{% endblock %}
+
+{% block content %}
+  <p>
+    1グループ{{Constants.players_per_group}}人の公共財ゲームです。
+    最初に{{Constants.endowment}}万円を持っており、各プレイヤはいくら投資するかを決定します。
+    全員の投資額を{{Constants.multiplier}}倍し、それを等分した額が公共財からの利益として得られます。
+  </p>
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

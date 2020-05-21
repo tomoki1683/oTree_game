@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    選好の入力
+{% endblock %}
+
+{% block content %}
+    <p>
+      これは男性{{Constants.num}}人と女性{{Constants.num}}人のマッチングです。
+      あなたの役割は{{your_role}}です。
+      あなたの選好は{{your_true_preference}}です。
+      <br/>
+      申告する選好を入力してください。
+    </p>
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

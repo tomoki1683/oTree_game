@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Page title
+{% endblock %}
+
+{% block content %}
+    <p>
+      あなたの役割は{{your_role}}でした。
+      あなたの選好は{{your_true_preference}}でした。
+      <br/>
+      あなたのマッチング相手は{{your_match}}です。
+      あなたが獲得した利得は{{player.payoff}}です。
+    </p>
+    {% next_button %}
+{% endblock %}
